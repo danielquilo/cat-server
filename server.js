@@ -38,7 +38,7 @@ app.delete("/cats/:id", async (request, response) => {
 // put - UPDATE
 app.put("/cats/:id", async (request, response) => {
   // const options = { new: true };
-  const updatedCat = await Cat.findByIdAndUpdate(request.params.id, request.body, options);
+  const updatedCat = await Cat.findByIdAndUpdate(request.params.id, request.body);
   response.json(updatedCat);
   });
 
